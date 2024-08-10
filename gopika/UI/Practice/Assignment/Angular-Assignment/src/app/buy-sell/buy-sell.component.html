@@ -1,0 +1,35 @@
+<div class="container">
+  <div
+    class="container p-4 col-6 text-bg-dark opacity-90 shadow-8 login-content"
+  >
+    <div class="col-8 offset-4 text-xl">WELCOME!</div>
+    <div class="col-8 offset-2">
+      <form>
+        <div class="form-group">
+          <label for="account">Account : </label>
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Account Name / Account Number / Account Id"
+            name="account"
+            id="account"
+          />
+        </div>
+
+        <label for="action">Action</label>
+        <select class="form-select" id="action" [(ngModel)]="selectedOption">
+          <option selected>Select trade</option>
+          <option name="buy" name="buy">Buy</option>
+          <option name="sell" name="sell">Sell</option>
+        </select>
+        <div *ngIf="">
+          This is shown if condition is true
+          <!-- <tr *ngFor="let color of colorsList"> -->
+          <!-- <td [style.background-color]="color" style="color:white">{{ color }}</td> -->
+          <!-- </tr> -->
+        </div>
+        <button type="submit" (click)="submit()" class="btn btn-primary m-4">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
