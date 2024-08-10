@@ -1,0 +1,13 @@
+<div>
+  <label class="mt-3">Anything :</label>
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter anything"
+    (blur)="submit()"
+  />
+
+</div>
+<div *ngIf="value">
+  <app-api-task></app-api-task>
+</div>

@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background-image: url(https://orionadvisortech.com/wp-content/themes/orion-tech/images/favicon.png);
+ }
+
+.login-content{
+    margin-top: 20%;
+}

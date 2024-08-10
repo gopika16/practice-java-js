@@ -1,0 +1,23 @@
+body,body *
+{
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+.container{
+    background-color: #26282B;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: max-content;
+    height: max-content;
+}
+
+section{
+    background-color: #26282B;
+}
