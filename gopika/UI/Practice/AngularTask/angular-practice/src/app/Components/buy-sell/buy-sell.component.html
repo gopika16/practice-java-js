@@ -1,0 +1,25 @@
+<div *appCustomIf="trade.action === 'buy'">
+  <label for="buy" class="mt-3">Buy :</label>
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Symbol"
+    name="symbol"
+    [(ngModel)]="trade.symbol"
+    (change)="emitSymbol(trade.symbol)"
+    appColor="green"
+  />
+</div>
+<div *appCustomIf="trade.action === 'sell'">
+  <label for="sell" class="mt-3">Sell :</label>
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Symbol"
+    name="symbol"
+    [(ngModel)]="trade.symbol"
+    (change)="emitSymbol(trade.symbol)"
+    appColor="red"
+  />
+</div>
+
