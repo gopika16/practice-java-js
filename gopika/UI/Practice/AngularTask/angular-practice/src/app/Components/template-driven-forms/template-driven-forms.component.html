@@ -1,0 +1,13 @@
+<p>template-driven-forms works!</p>
+
+<p>Template Driven</p>
+
+<form>
+  <label for="name">name</label>
+  <input type="text" name="name" [(ngModel)]="user.name">
+
+  <label for="email">email</label>
+  <input type="email" name="email" [(ngModel)]="user.email">
+
+  <button type="submit" (click)="submit()">Submit</button>
+</form>

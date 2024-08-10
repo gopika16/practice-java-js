@@ -1,0 +1,10 @@
+<div *ngIf="trade.symbol">
+  <label for="sell" class="mt-3">Quantity :</label>
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter quantity"
+    name="quantity"
+    [(ngModel)]="quantity"
+  />
+</div>

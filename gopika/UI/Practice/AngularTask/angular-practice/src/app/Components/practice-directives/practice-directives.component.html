@@ -1,0 +1,17 @@
+<div *ngIf="colorsList">
+  This is shown if condition is true
+  <tr *ngFor="let color of colorsList">
+    <td [style.background-color]="color" style="color: white">{{ color }}</td>
+  </tr>
+</div>
+
+<p appColor myColor="orange">Example of custom directive</p>
+
+<!-- <h4>ng-container</h4>
+<p>
+  I turned the corner
+  <ng-container *ngIf="user">
+    and saw {{user.name}}. I waved
+  </ng-container>
+  and continued on my way.
+</p> -->

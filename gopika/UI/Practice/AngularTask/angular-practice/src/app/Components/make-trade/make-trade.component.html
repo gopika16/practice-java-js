@@ -1,0 +1,48 @@
+<div class="container">
+  <div
+    class="container p-4 col-6 text-bg-dark opacity-90 shadow-8 login-content"
+  >
+    <div class="col-8 offset-5 text-xl">WELCOME!</div>
+    <div class="col-8 offset-2">
+      <form>
+        <div class="form-group">
+          <label for="account">Account : </label>
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Account Name / Account Number / Account Id"
+            name="account"
+            [(ngModel)]="trade.account"
+          />
+        </div>
+        <label for="action">Action</label>
+        <select class="form-select" name="action" [(ngModel)]="trade.action" (change)="test()">
+          <option disabled value="null">Select trade</option>
+          <option value="buy">Buy</option>
+          <option value="sell">Sell</option>
+        </select>
+        <p *ngIf="trade.symbol">
+          Symbol : {{ trade.symbol }} | Quantity :
+          {{ QuantityReference.quantity }}
+        </p>
+        <app-buy-sell
+          [trade]="trade"
+          (UpdateSecuritySymbol)="getResult($event)"
+        >
+        </app-buy-sell>
+        <app-stock-quantity [trade]="trade" #QuantityReference></app-stock-quantity>
+        <button type="submit" (click)="submit()" class="btn btn-primary m-4">
+          Submit
+        </button>
+        <button
+          type="submit"
+          (click)="getTradeData()"
+          class="btn btn-primary m-4"
+        >
+          Trade Info
+        </button>
+      </form>
+      <a routerLink="/home"> Home </a>
+    </div>
+  </div>
+</div>
